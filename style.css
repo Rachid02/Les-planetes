@@ -1,0 +1,205 @@
+@charset "UTF-8";
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  background-color: black;
+  color: antiquewhite;
+}
+nav li {
+  margin: 0;
+}
+nav #menu-menu a {
+  padding: 1.25rem 2rem;
+  display: block;
+  color: cornsilk;
+  text-decoration: none;
+}
+nav #menu-menu a:hover {
+  color: coral;
+  font-size: 1.25rem;
+  letter-spacing: 5px;
+  transition: 0.5s;
+}
+
+nav ul {
+  display: flex;
+  max-width: 1150px;
+  margin: auto;
+  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav menu {
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav .burger-menu {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin: 0.5rem;
+}
+
+nav .burger-menu:before, nav .burger-menu:after, nav .burger-menu span {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: antiquewhite;
+  position: absolute;
+  transition: 1s;
+}
+
+nav .burger-menu:before {
+  top: 0;
+}
+
+nav .burger-menu:after {
+  bottom: 0;
+}
+
+.burger-menu span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .burger-menu.active span {
+  opacity: 0%;
+}
+
+nav .burger-menu.active:before {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+nav .burger-menu.active:after {
+  transform: rotate(-45deg);
+  bottom: 50%;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.attachment-post-thumbnail {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.articleAside .attachment-post-thumbnail {
+  max-width: 300px;
+  object-fit: contain;
+}
+
+.articles {
+  padding-top: 1rem;
+  display: flex;
+}
+.articles .divContainer {
+  padding-left: 1rem;
+}
+
+.articles::nth-of-type(2n) {
+  display: flex;
+}
+
+/*Découvertes */
+/* Contact */
+.wpcf7 {
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.wpcf7-form {
+  padding: 1rem;
+  background-color: black;
+  color: antiquewhite;
+}
+.wpcf7-form label {
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+.wpcf7-form .nPo {
+  width: 100%;
+}
+.wpcf7-form #messId {
+  margin: 0;
+  padding: 0;
+}
+.wpcf7-form p:last-of-type {
+  text-align: center;
+}
+.wpcf7-form p:last-of-type span {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .articles {
+    display: flex;
+    flex-direction: column;
+  }
+  .articles div {
+    width: 100%;
+  }
+  .articles div .attachment-post-thumbnail {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    overflow: hidden;
+  }
+  nav li {
+    margin: 0;
+  }
+  nav .picture {
+    width: 100px;
+  }
+  nav menu {
+    display: block;
+    transform: translateX(100%);
+    transition: 0.25s;
+  }
+  nav menu #menu-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  nav menu #menu-menu li {
+    margin: 0;
+    padding-right: 2rem;
+  }
+  nav menu #menu-menu li a {
+    color: antiquewhite;
+  }
+  nav menu #menu-menu li a:hover {
+    color: coral;
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+    transition: 0.5s;
+  }
+  nav menu.active {
+    transform: translateX(0%);
+  }
+  nav menu ul {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
